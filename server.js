@@ -15,7 +15,7 @@ app.use(
   })
 );
 
-const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@graphql-api.yg2or.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`;
+const uri = `${process.env.MONGO_DB}?retryWrites=true&w=majority`;
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 mongoose
   .connect(uri, options)
